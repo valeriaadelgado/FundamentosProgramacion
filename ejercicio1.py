@@ -6,5 +6,5 @@ Salidas:
     saludo:string
 '''
 nombre = input("escribe tu nombre: ")
-saludo = "Holaa " + nombre + " XD"
+saludo = "Holaa " + nombre + " pXD"
 print(saludo)
