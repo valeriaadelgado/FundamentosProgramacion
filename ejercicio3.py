@@ -8,6 +8,7 @@ Entradas
 Salidas:
    hipotenusa -c
 '''
+import math
 a = input("Escrib el valor de cateto A: ")
 a = int(a)
 b = input("Escribe el valor de cateto B: ")
