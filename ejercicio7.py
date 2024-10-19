@@ -1,16 +1,18 @@
 '''
-
+Programa que recibe una cantidad de minutos y muestra por pantalla a cuantas horas y minutos corresponde
 '''
-v1 = input("Ingresa la venta 1: ")
-v1 = int(v1)
-v2 = input("ingresa la venta 2: ")
-v2 = int(v2)
-v3 = input("ingresa la venta 3: ")
-v3 = int(v3)
-c1 = (v1*0.10)
-c2 = (v2*0.10)
-c3 = (v3*0.10)
-ct = (c1+c2+c3)
-vt = (v1+v2+v3)
-sueldo = (ct + vt)
-print ("El sueldo es de:",sueldo)
+def convertir_minutos_a_horas(minutos):
+    horas = minutos // 60
+    minutos_restantes = minutos % 60
+    return horas, minutos_restantes
+
+# Solicitar al usuario que ingrese la cantidad de minutos
+try:
+    minutos_input = int(input("Ingrese la cantidad de minutos: "))
+    if minutos_input < 0:
+        print("Por favor, ingrese un número positivo.")
+    else:
+        horas, minutos = convertir_minutos_a_horas(minutos_input)
+        print(f"{minutos_input} minutos son {horas} horas y {minutos} minutos.")
+except ValueError:
+    print("Por favor, ingrese un número válido.")
